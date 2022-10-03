@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://suyoung:1234@cluster0.8bkrkyt.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://test1:tlffltqod@cluster0.8bkrkyt.mongodb.net/?retryWrites=true&w=majority')
 .then( () => console.log('mongodb connected'))
 .catch(err => console.log(err))
 
@@ -32,8 +32,8 @@ app.post('/register', (req,res) => {
   
 })
 
-// - app.use(express.json());
-// - app.use(express.urlencoded({extended: true}));
+- app.use(express.json());
+- app.use(express.urlencoded({extended: true}));
 
 
 
