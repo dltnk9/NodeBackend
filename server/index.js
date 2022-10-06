@@ -20,8 +20,10 @@ mongoose.connect(config.mongoURI).then(() => console.log('MongoDB Connected...')
 
 app.get('/', (req, res) => res.send('Hello World!~~ '))
 
-app.get('/api/hello', (req, res) => res.send('Hello World!~~ '))
-
+app.get('/api/hello', (req, res) => {
+  
+  res.send('Hello World!~ ')
+})
 app.post('/api/users/register', (req, res) => {
 
   //회원 가입 할떄 필요한 정보들을  client에서 가져오면 
@@ -102,9 +104,11 @@ app.get('/api/users/logout', auth, (req, res) => {
 })
 
 
+app.get('/api/hello', (req,res) => {
+  res.send("Hello")
+})
 
 
-
-const port = 3000
+const port = 5000
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
